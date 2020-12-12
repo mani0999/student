@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Union Members</title>
+</head>
+<body>
+    <style> 
+
+        body {
+        /* background-image: url("https://images.unsplash.com/photo-1483354483454-4cd359948304?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"); */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-color: #7b807b;
+        }
+        table, td, th { 
+         border: 1px solid rgb(73, 73, 73); 
+         text-align: left; 
+        } 
+        table { 
+         border-collapse: collapse; 
+         width: 50%; 
+        } 
+        .table-data{ 
+         position: relative; 
+         left:150px; 
+         top:100px; 
+        } 
+        th, td { 
+         padding: 15px; 
+        } 
+        button{
+        background-color: #243024;
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+
+        .home{
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+
+
+
+        </style>
+        <div class = 'home'> 
+    <button onclick="location.href='/users/index'">Home</button></div>
+    <div class="table-data">
+<h2>Union Members</h2>
+    <table border="1">
+        <tr>
+            <th>S.N</th>
+            <th>Student_ID</th>
+            <th>First_Name</th>
+            <th>Last_Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.Student_ID %></td>
+            <td><%=data.First_name %></td>
+            <td><%=data.Last_name %></td>
+            <td><%=data.Age %></td>
+            <td><%=data.Email %></td>
+            <td><%=data.Phone %></td>
+            <td><a href="/users/edit/<%=data.id%>">Edit</a></td>
+            <td><a href="/users/delete/<%=data.id%>">Delete</a></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>

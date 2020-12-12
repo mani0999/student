@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+   body {
+        background-image: url("https://image.shutterstock.com/image-vector/blue-bokeh-background-260nw-627140603.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        }
+   .user-detail {
+    height: 78vh;
+    border: 2px solid #f1f1f1; 
+    padding: 16px; 
+    background-color: white; 
+    width: 20%;
+    position: absolute;
+    left:40%;
+   } 
+   input{ 
+    width: 100%; 
+    padding: 7px;
+    margin: 3px 0 15px 0; 
+    display: inline-block; 
+    border: none; 
+    background: #f1f1f1;
+   } 
+   input[type=text]:focus, input[type=password]:focus { 
+    background-color: #ddd;
+    outline: none;
+   } 
+   button[type=submit] { 
+    background-color: #434140; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    margin: 8px 0; 
+    border: none; 
+    cursor: pointer; 
+    width: 100%; 
+    opacity: 0.9; 
+    font-size: 20px;
+   } 
+   label{ 
+    font-size: 18px;
+   } 
+   button[type=submit]:hover { 
+    background-color:#3d3c3c;
+   } 
+  h1{
+     text-align: center;
+  }
+   /* .para{
+      line-height: 1.5;
+      vertical-align: middle;
+   } */
+
+   .home{
+      position: absolute;
+      top: 8px;
+      right: 16px;
+        }
+   </style>
+<body>
+   <h1 >Register</h1>
+  <!-- / <div class = "para"><p>Welcome to Student Union</p></div> -->
+<!--====form section start====-->
+<div class="user-detail">
+    <form   method="POST">
+          <label>Student_ID</label>
+          <input type="text" placeholder="Enter Student id" name="Student_ID" required >
+          <label>First_Name</label>
+          <input type="text" placeholder="Enter first name" name="First_name" required >
+          <label>Last_Name</label>
+          <input type="text" placeholder="Enter last name" name="Last_name" required >
+          <label>Age</label>
+          <input type="text" placeholder="Enter age" name="Age" required >
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter Email Address" name="Email" required>
+          <label>Phone</label>
+          <input type="text" placeholder="Enter phone number" name="Phone" required>
+          <button type="submit">Submit</button>
+        </div>
+</div>
+<!--====form section start====-->
+
+<div class = 'home'> 
+   <button onclick="location.href='/users/index'">Home</button></div>
+</body>
+</html>
