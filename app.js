@@ -1,20 +1,23 @@
 var express = require("express"); 
 var app = express(); 
-NODE_ENV: process.env.NODE_ENV || 'development';
+
 var path = require("path"); 
 const ejs = require("ejs");
 
 //to set view engine
 app.set('view engine', 'ejs');
  
-app.get('/',(req, res) => {
-    res.send("welcome to home page");
+
+
+//TO dispaly main student union page
+app.get('*', function(req, res, next) { 
+res.render('index') 
 });
 
 //To get router
-// var usersRouter = require('./routes/users');
-// app.use('/users',usersRouter);
+var usersRouter = require('./routes/users');
+app.use('/users',usersRouter);
 
 //local host runing port
-app.listen(3306); 
-//console.log("Server running at Port 8080"); 
+app.listen(8080); 
+console.log("Server running at Port 8080"); 
