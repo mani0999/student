@@ -14,5 +14,5 @@ var usersRouter = require('./routes/users');
 app.use('/users',usersRouter);
 
 //local host runing port
-app.listen(3000); 
+app.listen(3360); 
 //console.log("Server running at Port 8080"); 
