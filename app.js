@@ -7,11 +7,13 @@ const ejs = require("ejs");
 //to set view engine
 app.set('view engine', 'ejs');
  
-
+app.get('/',(req, res) => {
+    res.send("welcome to home page");
+});
 
 //To get router
-var usersRouter = require('./routes/users');
-app.use('/users',usersRouter);
+// var usersRouter = require('./routes/users');
+// app.use('/users',usersRouter);
 
 //local host runing port
 app.listen(3306); 
