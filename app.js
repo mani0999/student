@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 
 
 //TO dispaly main student union page
-rote.get('/', function(req, res, next) { 
+app.get('/', function(req, res, next) { 
 res.render('index') 
 });
 
