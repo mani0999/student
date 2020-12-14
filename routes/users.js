@@ -8,7 +8,6 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 //TO dispaly main student union page
 router.get('/index', function(req, res, next) { 
 res.render('index'); 
-
 });
 
 //TO get Enroll form page

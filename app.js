@@ -8,16 +8,10 @@ const ejs = require("ejs");
 app.set('view engine', 'ejs');
  
 
-
-//TO dispaly main student union page
-app.get('/', function(req, res, next) { 
-res.render('index') 
-});
-
 //To get router
 var usersRouter = require('./routes/users');
 app.use('/users',usersRouter);
 
 //local host runing port
-app.listen(5000); 
+app.listen(8081); 
 //console.log("Server running at Port 8080"); 
